@@ -1,0 +1,5 @@
+name: TutorialPlugin
+main: TutorialPlugin\Main
+api: [3.0.0, 4.0.0]
+author: haya1007
+version: 1.0
