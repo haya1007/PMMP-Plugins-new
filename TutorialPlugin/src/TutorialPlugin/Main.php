@@ -33,26 +33,27 @@ class Main extends PluginBase{
 		$this->chest = InvMenu::create(InvMenu::TYPE_DOUBLE_CHEST);
 		$this->level = $this->getServer()->getLevelByName("tutorial");
 		if($this->getServer()->getPluginManager()->getPlugin("FierceBattle") != null){
-      	  $this->fb = $this->getServer()->getPluginManager()->getPlugin("FierceBattle");
-      	  $this->getLogger()->info("FierceBattleを検出しました");
-      	}else{
-      	  $this->getLogger()->warning("FierceBattleが見つかりませんでした");
-      	  $this->getServer()->getPluginManager()->disablePlugin($this);
-    	}
+      	  	$this->fb = $this->getServer()->getPluginManager()->getPlugin("FierceBattle");
+      	  	$this->getLogger()->info("FierceBattleを検出しました");
+      			}else{
+      	  	$this->getLogger()->warning("FierceBattleが見つかりませんでした");
+      	 	$this->getServer()->getPluginManager()->disablePlugin($this);
+    		}
 		if($this->getServer()->getPluginManager()->getPlugin("option") != null){
-      	  $this->option = $this->getServer()->getPluginManager()->getPlugin("option");
-      	  $this->getLogger()->info("optionを検出しました");
-      	}else{
-      	  $this->getLogger()->warning("optionが見つかりませんでした");
-      	  $this->getServer()->getPluginManager()->disablePlugin($this);
-    	}
+      	  		$this->option = $this->getServer()->getPluginManager()->getPlugin("option");
+      	  		$this->getLogger()->info("optionを検出しました");
+      		}else{
+      	  		$this->getLogger()->warning("optionが見つかりませんでした");
+      	  		$this->getServer()->getPluginManager()->disablePlugin($this);
+    		}
 
-    	$this->saveDefaultConfig();
+    		$this->saveDefaultConfig();
+		
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		$this->skin = new Config($this->getDataFolder() . "skinData.yml", Config::YAML);
 		$this->getScheduler()->scheduleDelayedTask(new custom($this), 20);
 
-    	$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
+    		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 
 		$npc = new NPC($this);
 		$this->npc_one = $npc->randomEid();
