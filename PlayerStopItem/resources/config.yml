@@ -1,0 +1,19 @@
+---
+#アイテムの名前
+itemName: StopItem
+
+#アイテムID と メタ値
+itemId: 287
+itemMeta: 0
+
+#止める時間(秒)
+stopTime: 5
+
+#アイテムを使える回数
+# 0以下にすると無限
+limit: 3
+
+#確率
+#例) 10と入力すると 1/10 の確立になります
+probability: 10
+...
