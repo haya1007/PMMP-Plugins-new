@@ -1,0 +1,10 @@
+---
+#剣の名前
+NAME: "§eThunderSword"
+#攻撃力
+ATK: 5
+#壊れないようにするか (true or false)
+Unbreakable: true
+#ブロックタップでも雷を落とすようにするか (true or false)
+BlockTap: true
+...

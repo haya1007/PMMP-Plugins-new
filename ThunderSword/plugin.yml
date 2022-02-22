@@ -1,0 +1,15 @@
+name: ThunderSword
+main: ThunderSword\Main
+version: 2.1.0
+api: 4.0.0
+author: haya1007
+
+commands:
+  sword:
+    description: "雷を落とす剣を入手"
+    usage: "/sword"
+    permission: command.sword
+permissions:
+  command.sword:
+    description: 
+    default: true
